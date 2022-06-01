@@ -2,7 +2,10 @@ package game;
 
 import javax.swing.*;
 
+// My main class contains my main method and is the class that is run to run my program.
 public class Main {
+    
+    // This method allows the user to choose how large they want to make their lightboard as long as it is within the parameters.
     public static void main(String[] args) {
 
         JOptionPane.showMessageDialog(null,"Welcome to my Light Board.");
