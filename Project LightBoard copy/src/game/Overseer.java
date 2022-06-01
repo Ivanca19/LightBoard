@@ -2,6 +2,7 @@ package game;
 
 import javax.swing.*;
 
+// The Overseer class creates my Overseer which oversees the interaction between the User the view and the LightBoard.
 public class Overseer {
 
     private LightBoard _board;
@@ -26,6 +27,8 @@ public class Overseer {
         return JOptionPane.showOptionDialog(null, msg, title, JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, null, 0);
     }
 
+    // The menu method essentially creates an interactive system where the user can directly interact with the Lightboard. The boolean will determine
+    // if the user has desided to end the program.
     public boolean menu() {
 
         String[] options = {"Turn on/off", "Turn bulb on/off", "Turn Grid on/off", "Turn on/off row/col", "random", "exit"};
@@ -130,11 +133,13 @@ public class Overseer {
         return _map.drawView();
     }
 
+    // This method generates a random number from 0 - 100
     public int Light() {
         int x = (int)(101 * Math.random());
         return x;
     }
 
+    // This method will light up the board via lighting up each light where a light has a 40% chance of being lit.
     public void startBoard() {
         for(int r = 0; r < _board.getBoard().length ; r++) {
             for(int c = 0; c < _board.getBoard()[r].length ; c++) {
