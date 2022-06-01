@@ -2,6 +2,7 @@ package game;
 
 import javax.swing.*;
 
+//The View class is in charge of creating a view that reflects the data in the LightBoard object
 public class View {
 
     private LightBoard _board;
